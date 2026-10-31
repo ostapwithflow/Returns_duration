@@ -13,6 +13,6 @@ df['log_return'] = np.log(df['close'] / df['close'].shift(1))
 # перша свічка без попереднього закриття -> NaN, викидаємо
 out = df[['open_time', 'log_return']].dropna()
 
-out.to_csv('BTCUSDT-1m-2026-07-returns.csv', index=False)
+out.to_csv('returns.csv', index=False)
 
 
